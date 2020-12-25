@@ -35,19 +35,20 @@ def average_quality(L, num_trials):
         total += quality(L)
     return total / num_trials
 
-L = [i for i in range(1, 21)]
-shuffle(L)
-print(L)
-print(quality(L))
-print(quality([0, 1, 2, 3, 4, 5, 6]))
-print(quality([1, 4, 2, 3, 6, 5, 0]))
+if __name__ == "__main__":
+    L = [i for i in range(1, 21)]
+    shuffle(L)
+    print(L)
+    print(quality(L))
+    print(quality([0, 1, 2, 3, 4, 5, 6]))
+    print(quality([1, 4, 2, 3, 6, 5, 0]))
 
-greek = ["alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta",
-"theta", "iota", "kappa", "lambda", "mu"]
-shuffle(greek)
-print(greek)
-print(quality(greek))
+    greek = ["alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta",
+    "theta", "iota", "kappa", "lambda", "mu"]
+    shuffle(greek)
+    print(greek)
+    print(quality(greek))
 
-print(check_shuffle(shuffle))
+    print(check_shuffle(shuffle))
 
-print(average_quality([i for i in range(100)], 1000))
+    print(average_quality([i for i in range(100)], 1000))

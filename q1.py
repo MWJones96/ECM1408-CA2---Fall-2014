@@ -24,7 +24,8 @@ def draw_histogram(words, resolution=1):
     percentages = [(x / total_words) * 100 for x in H]
     histogram(range(len(percentages)), percentages, resolution)
 
-file_name = sys.argv[1]
-with open(file_name) as f:
-    words = re.sub(r'[^A-Za-z]', ' ', f.read().lower()).split()
-    draw_histogram(words, resolution=0.25)
+if __name__ == "__main__":
+    file_name = sys.argv[1]
+    with open(file_name) as f:
+        words = re.sub(r'[^A-Za-z]', ' ', f.read().lower()).split()
+        draw_histogram(words, resolution=0.25)
